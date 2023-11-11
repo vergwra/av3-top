@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbdnvd5soug4g"]
+
+[ext_resource type="PackedScene" uid="uid://dvh4ekc6j3aeg" path="res://Models/house_with_interior..._and_porch/scene.gltf" id="1_p3rsl"]
+
+[node name="scene" instance=ExtResource("1_p3rsl")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

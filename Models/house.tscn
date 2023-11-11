@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://j57by8cgu4c8" path="res://Models/house_with_interior/scene.gltf" id="1_gvng3"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2n341"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bqqpe"]
 points = PackedVector3Array(1.98616, 3.88343, 1.86725, 1.97724, 1.31205, 1.88744, -2.11239, 1.31205, 1.90938, -2.12756, 3.88343, 1.89446, 1.98616, 4.15447, 1.86725, 6.91371, -0.0859132, 1.9831, -2.03832, -0.0859132, 1.9831, -2.14273, 1.31205, 6.91348, -2.16414, 3.88343, 6.91348, -2.12756, 4.15447, 1.89446, 3.12034, 4.15447, 3.002, 6.8673, 2.24015, 1.99451, 6.91371, 0.979993, 1.9831, 6.95208, -0.0859132, 6.81343, -2.03832, -0.0859132, 10.7065, -2.11239, 1.31205, 10.7802, -2.16414, 4.15447, 6.91348, -2.12756, 3.88343, 10.7951, 5.76169, 4.15447, 6.82396, 6.8673, 2.24015, 7.67611, 6.95208, 0.979993, 6.81343, 6.95208, -0.0859132, 7.73579, 5.67245, -0.0859132, 10.7065, 3.00433, 1.31205, 10.8109, 3.00433, 3.88343, 10.8329, -2.12756, 4.15447, 10.7951, 5.76169, 4.15447, 10.7951, 6.95208, 0.979993, 7.73579, 5.76169, 3.88343, 10.7951, 5.74562, 1.31205, 10.7802, 3.00433, 4.15447, 10.8329)
 
 [node name="house" instance=ExtResource("1_gvng3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0593109, 0, -0.664288)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Spodok vonok_001_0" index="1"]
-shape = SubResource("ConvexPolygonShape3D_2n341")
+shape = SubResource("ConvexPolygonShape3D_bqqpe")
