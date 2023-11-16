@@ -1,0 +1,11 @@
+Model Information:
+* title:	FNAF Wall Sun
+* source:	https://sketchfab.com/3d-models/fnaf-wall-sun-3da62473383d4171a22e1170949d5dae
+* author:	EmilJoes Games (https://sketchfab.com/emiljoes)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "FNAF Wall Sun" (https://sketchfab.com/3d-models/fnaf-wall-sun-3da62473383d4171a22e1170949d5dae) by EmilJoes Games (https://sketchfab.com/emiljoes) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

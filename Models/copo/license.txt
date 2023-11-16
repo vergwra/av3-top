@@ -1,0 +1,11 @@
+Model Information:
+* title:	FNAF Soda Cup
+* source:	https://sketchfab.com/3d-models/fnaf-soda-cup-dc85a1ebaecf45b4b18f1fcb07a4d1ab
+* author:	EmilJoes Games (https://sketchfab.com/emiljoes)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "FNAF Soda Cup" (https://sketchfab.com/3d-models/fnaf-soda-cup-dc85a1ebaecf45b4b18f1fcb07a4d1ab) by EmilJoes Games (https://sketchfab.com/emiljoes) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

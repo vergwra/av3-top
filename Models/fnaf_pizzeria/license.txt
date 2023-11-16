@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fnaf Pizzeria
+* source:	https://sketchfab.com/3d-models/fnaf-pizzeria-e6fb182ece2048ee87779b6ca6ff0905
+* author:	Cesar_24 (https://sketchfab.com/Cesar_24)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fnaf Pizzeria" (https://sketchfab.com/3d-models/fnaf-pizzeria-e6fb182ece2048ee87779b6ca6ff0905) by Cesar_24 (https://sketchfab.com/Cesar_24) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	FNAF SB | Generator
+* source:	https://sketchfab.com/3d-models/fnaf-sb-generator-f66317d89ccb494aaceb20e51f438ec0
+* author:	KPMisParrot (https://sketchfab.com/KPMisParrot)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "FNAF SB | Generator" (https://sketchfab.com/3d-models/fnaf-sb-generator-f66317d89ccb494aaceb20e51f438ec0) by KPMisParrot (https://sketchfab.com/KPMisParrot) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

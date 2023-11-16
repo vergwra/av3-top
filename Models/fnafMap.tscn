@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://die6dexbb8q8a"]
+
+[ext_resource type="PackedScene" uid="uid://bvjopd14xwi0x" path="res://Models/fnaf_pizzeria/scene.gltf" id="1_o3teu"]
+
+[node name="scene" instance=ExtResource("1_o3teu")]
+
+[node name="Object_24" parent="Sketchfab_model/root/GLTF_SceneRootNode/conos_31" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0249181, 4.76837e-07, 0.00156935)
+
+[node name="ventilador_55" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="31"]
+transform = Transform3D(0.760393, -7.98509e-07, -0.0860967, -7.98509e-07, 0.765252, -1.41497e-05, 0.0860967, 1.41497e-05, 0.760393, 0.327304, 1.14238, 7.91358)
