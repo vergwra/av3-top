@@ -1,11 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://die6dexbb8q8a"]
+[gd_scene load_steps=5 format=3 uid="uid://die6dexbb8q8a"]
 
 [ext_resource type="PackedScene" uid="uid://bvjopd14xwi0x" path="res://Models/fnaf_pizzeria/scene.gltf" id="1_o3teu"]
+[ext_resource type="PackedScene" uid="uid://bv301n0gqq1tg" path="res://Models/copo/scene.gltf" id="2_4bo63"]
+[ext_resource type="PackedScene" uid="uid://caoy3me720bir" path="res://Models/caixaDeSom/scene.gltf" id="3_umlfc"]
+[ext_resource type="PackedScene" uid="uid://d3owmipdyqb4y" path="res://Models/gerador/scene.gltf" id="4_01ooo"]
 
 [node name="scene" instance=ExtResource("1_o3teu")]
 
 [node name="Object_24" parent="Sketchfab_model/root/GLTF_SceneRootNode/conos_31" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0249181, 4.76837e-07, 0.00156935)
 
+[node name="manteles_34" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="11"]
+transform = Transform3D(0.452943, 0, 0, 0, 0.452943, 0, 0, 0, 0.452943, 3.60378, 0.451647, -4.97466)
+
+[node name="MesaPartAndService_35" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="12"]
+visible = false
+
+[node name="Object_41" parent="Sketchfab_model/root/GLTF_SceneRootNode/CORTINA_37" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.128012, -0.151039, -0.0179263)
+
+[node name="puerta_41" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="17"]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -9.33486, 0.993454, -6.9021)
+
+[node name="tv_53" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="29"]
+transform = Transform3D(1, 0, 0, 0, 0.999973, -0.00728203, 0, 0.00728203, 0.999973, 0.473795, 1.38854, 8.19102)
+
+[node name="ventanas_54" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="30"]
+transform = Transform3D(1.53973, 0, 0, 0, 1.53973, 0, 0, 0, 1.53973, 0.353941, -0.17322, 0.0102481)
+
 [node name="ventilador_55" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="31"]
 transform = Transform3D(0.760393, -7.98509e-07, -0.0860967, -7.98509e-07, 0.765252, -1.41497e-05, 0.0860967, 1.41497e-05, 0.760393, 0.327304, 1.14238, 7.91358)
+
+[node name="ba��ohombrescase_65" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="39"]
+transform = Transform3D(0.45261, 0, 0, 0, 0.45261, 0, 0, 0, 0.45261, 12.8573, 3.23228, 6.59238)
+
+[node name="ba��omujeresCase_66" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="40"]
+transform = Transform3D(0.45261, 0, 0, 0, 0.45261, 0, 0, 0, 0.45261, 12.8573, 3.23228, 10.4526)
+
+[node name="Node3D" type="Node3D" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="41"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.222884, 0.550404, 4.66742)
+
+[node name="scene" parent="Sketchfab_model/root/GLTF_SceneRootNode/Node3D" index="0" instance=ExtResource("2_4bo63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120179, 0.939642, 7.5733)
+
+[node name="speaker" type="Node3D" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="42"]
+
+[node name="scene" parent="Sketchfab_model/root/GLTF_SceneRootNode/speaker" index="0" instance=ExtResource("3_umlfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58668, 0.599168, -8.29801)
+
+[node name="scene2" parent="Sketchfab_model/root/GLTF_SceneRootNode/speaker" index="1" instance=ExtResource("3_umlfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15786, 0.605355, -8.38575)
+
+[node name="Node3D2" type="Node3D" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="43"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -10.6083, 0.0417233, -3.8489)
+
+[node name="scene" parent="Sketchfab_model/root/GLTF_SceneRootNode/Node3D2" index="0" instance=ExtResource("4_01ooo")]
