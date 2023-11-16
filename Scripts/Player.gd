@@ -25,6 +25,8 @@ var gravity = 9.8
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func _process(delta):
+	_check_interacting();
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -47,6 +49,9 @@ func _physics_process(delta):
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED
+		
+	if (Input.is_action_just_pressed("interact")):
+		_try_interact();
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -79,3 +84,38 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+	
+const RAY_LENGTH = 1000;
+var current_interacting: interactable = null;
+
+func _try_interact():
+	if (current_interacting != null):
+		current_interacting.interact(self);
+	else:
+		print("Nao esta interagindo com nenhum objeto")
+
+func _check_interacting():
+	var space_state = get_world_3d().direct_space_state
+	var cam = camera
+	var mousepos = get_viewport().get_mouse_position()
+
+	var origin = cam.project_ray_origin(mousepos)
+	var end = origin + cam.project_ray_normal(mousepos) * RAY_LENGTH
+	var query = PhysicsRayQueryParameters3D.create(origin, end)
+	query.collide_with_areas = true
+
+	var result = space_state.intersect_ray(query)
+
+	if (result and result.collider is interactable):
+		var _obj = result.collider as interactable;
+		
+		if (current_interacting != _obj):
+			if (current_interacting != null):
+				current_interacting.on_exit_interact()
+			current_interacting = _obj
+			current_interacting.on_hover_interact()
+	else:
+		if (current_interacting):
+			current_interacting.on_exit_interact();
+		current_interacting = null
+	

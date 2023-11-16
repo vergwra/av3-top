@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://3fpuphbjm4yw"]
+
+[ext_resource type="Script" path="res://missions_manager.gd" id="1_kmc0j"]
+[ext_resource type="PackedScene" uid="uid://ck3db7hq00q01" path="res://Scenes/mission_template.tscn" id="2_rils6"]
+[ext_resource type="Script" path="res://Scenes/mission_test.gd" id="3_5s5im"]
+
+[node name="missions_manager" type="Node" node_paths=PackedStringArray("missions")]
+script = ExtResource("1_kmc0j")
+missions = [NodePath("mission")]
+
+[node name="mission" parent="." instance=ExtResource("2_rils6")]
+script = ExtResource("3_5s5im")
+mission_name = "mission test"
+mission_desc = "abra uma porta"
+target_quantity = 1
