@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bkljuv0ic0ho0" path="res://Models/static/static3.png" id="4_gd1d7"]
 [ext_resource type="Texture2D" uid="uid://b3sawwidmnwos" path="res://Models/static/static4.png" id="5_mteyd"]
 [ext_resource type="Texture2D" uid="uid://loxlevhj5fqp" path="res://Models/static/static5.png" id="6_s4hi6"]
-[ext_resource type="Texture2D" uid="uid://eb0u1m7uinyj" path="res://Models/Nova pasta/cover 2.png" id="7_g5sei"]
-[ext_resource type="Texture2D" uid="uid://b8cagyitypgsp" path="res://Models/Nova pasta/cover 3.png" id="8_dltvl"]
+[ext_resource type="Texture2D" uid="uid://eb0u1m7uinyj" path="res://Models/static/cover 2.png" id="7_g5sei"]
+[ext_resource type="Texture2D" uid="uid://b8cagyitypgsp" path="res://Models/static/cover 3.png" id="8_dltvl"]
 [ext_resource type="Texture2D" uid="uid://d3jh7h08rjxh7" path="res://Models/Nova pasta/cover 4.png" id="9_5pow7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aocgy"]
