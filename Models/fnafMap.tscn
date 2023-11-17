@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3owmipdyqb4y" path="res://Models/gerador/scene.gltf" id="4_01ooo"]
 
 [node name="scene" instance=ExtResource("1_o3teu")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="Object_24" parent="Sketchfab_model/root/GLTF_SceneRootNode/conos_31" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0249181, 4.76837e-07, 0.00156935)
