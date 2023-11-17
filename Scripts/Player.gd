@@ -1,10 +1,12 @@
 extends CharacterBody3D
 
+class_name player;
+
 var speed
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const SPRINT_SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const SENSITIVITY = 0.004
+const SENSITIVITY = 0.1
 
 #bob variables
 const BOB_FREQ = 2.4
@@ -21,40 +23,65 @@ var gravity = 9.8
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
+var on_hover_interactable: Callable;
+var on_exit_interactable: Callable;
 
 func _ready():
+	active_input();
+	
+	
+var input_activated = true;
+
+func active_input():
+	input_activated = true;
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func desactivate_input():
+	input_activated = false;
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 
 func _process(delta):
 	_check_interacting();
 
+var y_rot = 0.0;
+var x_rot = 0.0;
 func _input(event):
+	
+	if (!input_activated):
+		return;
+	
 	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * SENSITIVITY)
-		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+		y_rot -= event.relative.x * SENSITIVITY;
+		x_rot -= event.relative.y * SENSITIVITY;
+		x_rot = clamp(x_rot, -89, 89);
+		head.rotation_degrees.y = y_rot;
+		camera.rotation_degrees.x = x_rot;
+		#head.rotate_y(-event.relative.x * SENSITIVITY)
+		#camera.rotate_x(clamp(-event.relative.y, -90, 90) * SENSITIVITY)
 
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
-	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	
-	# Handle Sprint.
-	if Input.is_action_pressed("sprint"):
-		speed = SPRINT_SPEED
-	else:
-		speed = WALK_SPEED
+	var input_dir = Vector2.ZERO;
+	if (input_activated):
+		# Handle Jump.
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 		
-	if (Input.is_action_just_pressed("interact")):
-		_try_interact();
+		# Handle Sprint.
+		if Input.is_action_pressed("sprint"):
+			speed = SPRINT_SPEED
+		else:
+			speed = WALK_SPEED
+			
+		if (Input.is_action_just_pressed("interact")):
+			_try_interact();
+		# Get the input direction and handle the movement/deceleration.
+		input_dir = Input.get_vector("left", "right", "up", "down")
 
-	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if is_on_floor():
 		if direction:
@@ -85,7 +112,7 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 	
-const RAY_LENGTH = 1000;
+const RAY_LENGTH = 2.5;
 var current_interacting: interactable = null;
 
 func _try_interact():
@@ -114,7 +141,11 @@ func _check_interacting():
 				current_interacting.on_exit_interact()
 			current_interacting = _obj
 			current_interacting.on_hover_interact()
+			if (on_hover_interactable.is_valid()):
+				on_hover_interactable.bind(self).call();
 	else:
+		if (on_exit_interactable.is_valid()):
+			on_exit_interactable.bind(self).call();
 		if (current_interacting):
 			current_interacting.on_exit_interact();
 		current_interacting = null

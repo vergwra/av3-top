@@ -14,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	$mission_time.text = str(manager.current_time as int);
 	if (status == "SHOW"):
 		$mission_name.modulate.a = lerp($mission_name.modulate.a, 1.0, 4 * delta);
 		$mission_desc.modulate.a = lerp($mission_name.modulate.a, 1.0, 4 * delta);

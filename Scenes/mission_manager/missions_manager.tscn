@@ -13,4 +13,4 @@ missions = [NodePath("mission_porta"), NodePath("mission_gerador")]
 [node name="mission_gerador" parent="." instance=ExtResource("3_0kkfo")]
 mission_name = "Ligue todos os geradores"
 mission_desc = "Ligue todos os geradores para trazer energia para a pizzaria."
-target_quantity = 3
+target_quantity = 2

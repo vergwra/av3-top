@@ -5,6 +5,7 @@ class_name mission_manager
 @export var missions: Array[mission];
 var current_mission_index = 0;
 var current_mission: mission;
+var current_time = 0.0;
 
 var on_start_mission: Callable;
 var on_complete_mission: Callable;
@@ -16,10 +17,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if current_time > 0:
+		current_time -= delta;
 	
 func start_mission_by_index():
 	current_mission = missions[current_mission_index];
+
 	setup_mission(current_mission)
 	
 	if (on_start_mission.is_valid()):
@@ -40,10 +43,9 @@ func complete_all_missions():
 		on_complete_all_missions.bind().call();
 
 func setup_mission(_mission: mission):
+	current_time = _mission.mission_time;
 	_mission.start_mission();
 	_mission.on_complete = on_complete_current_mission;
-	print("start mission " + _mission.mission_name)
-	print(_mission.mission_desc);
 	
 func on_complete_current_mission(_mission: mission):
 	print("mission " + _mission.name + " completed")

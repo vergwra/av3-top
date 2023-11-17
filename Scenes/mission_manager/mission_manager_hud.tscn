@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://mission_manager_hud.gd" id="1_stq88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gng7y"]
-font_size = 50
+font_size = 65
 
 [sub_resource type="LabelSettings" id="LabelSettings_6c60k"]
 font_size = 30
@@ -16,6 +16,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_stq88")
+
+[node name="mission_time" type="Label" parent="."]
+layout_mode = 1
+offset_left = 36.0
+offset_top = 34.0
+offset_right = 388.0
+offset_bottom = 127.0
+text = "Tempo: 00"
+label_settings = SubResource("LabelSettings_gng7y")
+vertical_alignment = 1
 
 [node name="mission_name" type="Label" parent="."]
 layout_mode = 2
@@ -35,11 +45,10 @@ vertical_alignment = 1
 layout_mode = 2
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -187.5
-offset_top = 152.0
-offset_right = 187.5
-offset_bottom = 226.0
-grow_horizontal = 2
+offset_left = -184.0
+offset_top = 155.0
+offset_right = 191.0
+offset_bottom = 229.0
 text = "MISSION_DESC"
 label_settings = SubResource("LabelSettings_6c60k")
 horizontal_alignment = 1

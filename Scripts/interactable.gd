@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func interact(sender: Node3D):
+func interact(sender: player):
 	print("INTERACT WITH: " + self.name)
 	if (on_interact.is_valid()):
 		on_interact.bind(self).call();

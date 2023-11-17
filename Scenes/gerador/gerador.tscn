@@ -8,9 +8,17 @@
 [node name="gerador" type="RigidBody3D" groups=["geradores"]]
 freeze = true
 script = ExtResource("1_pseie")
+color_on = Color(0.0784314, 0.529412, 1, 1)
 
 [node name="scene" parent="." instance=ExtResource("1_hl3tm")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.164651, 0)
 shape = SubResource("SphereShape3D_k7km7")
+
+[node name="light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.197586, 0)
+light_color = Color(0.913725, 0.168627, 0, 1)
+light_indirect_energy = 1.618
+light_volumetric_fog_energy = 1.06
+light_size = 0.25

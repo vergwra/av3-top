@@ -1,32 +1,24 @@
 extends interactable
 
 class_name gerador
-
-var openned: bool = false;
-var target_rotation: float = 0.0;
-
-var on_open: Callable;
-
-func _process(delta):
-	rotation_degrees.y = lerp(rotation_degrees.y, target_rotation, 10 * delta);
 	
-func interact(sender: Node3D):
-	super.interact(self);
-	var z_vector = global_transform.basis.z
-	var relative_pos = sender.global_transform.origin - global_transform.origin
+@export var color_on: Color;
+@export var _desafio: desafio;
+var is_on = false;
 
-	var dot = z_vector.dot(relative_pos)
-	
-	openned = !openned;
-	handle_door_status(dot)
-	
-func handle_door_status(dot: float):
-	if (openned):
-		if (on_open.is_valid()):
-			on_open.bind(self).call()
-		target_rotation = 90 if dot > 0 else -90;
-	else:
-		target_rotation = 0;
-		
-	
+var on_completed_desafio: Callable;
+
+func interact(sender: player):
+	if (is_on):
+		return;
+	_desafio.initialize(sender);
+	_desafio.on_complete_desafio = on_complete_desafio;
+	sender.desactivate_input();
+	super.interact(sender);
+
+func on_complete_desafio(d: desafio):
+	is_on = true;
+	$light.light_color = color_on;
+	on_completed_desafio.call();
+
 	
