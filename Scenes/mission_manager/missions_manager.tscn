@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://3fpuphbjm4yw"]
+
+[ext_resource type="Script" path="res://missions_manager.gd" id="1_kmc0j"]
+[ext_resource type="PackedScene" uid="uid://ck3db7hq00q01" path="res://Scenes/mission_porta.tscn" id="2_cgckd"]
+[ext_resource type="PackedScene" uid="uid://ddbk3i0emfi0e" path="res://Scenes/mission_gerador.tscn" id="3_0kkfo"]
+
+[node name="mission_manager" type="Node" node_paths=PackedStringArray("missions")]
+script = ExtResource("1_kmc0j")
+missions = [NodePath("mission_porta"), NodePath("mission_gerador")]
+
+[node name="mission_porta" parent="." instance=ExtResource("2_cgckd")]
+
+[node name="mission_gerador" parent="." instance=ExtResource("3_0kkfo")]
+mission_name = "Ligue todos os geradores"
+mission_desc = "Ligue todos os geradores para trazer energia para a pizzaria."
+target_quantity = 2

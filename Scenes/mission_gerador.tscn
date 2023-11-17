@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddbk3i0emfi0e"]
+
+[ext_resource type="Script" path="res://Scenes/mission_gerador.gd" id="1_dhiuy"]
+
+[node name="mission_gerador" type="Node"]
+script = ExtResource("1_dhiuy")
+mission_name = "Abrir uma porta"
+mission_desc = "Abra uma porta para completar a missao (Apere mouse 1 na porta)"
+target_quantity = 1

@@ -22,6 +22,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.128012, -0.151039, -0.01792
 [node name="puerta_41" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="17"]
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -9.33486, 0.993454, -6.9021)
 
+[node name="Object_68" parent="Sketchfab_model/root/GLTF_SceneRootNode/puerta_004_45" index="0"]
+transform = Transform3D(1, 0, -5.00668e-15, 0, 1, 0, 6.36765e-15, 0, 1, 2.38419e-07, 0, 1.08506)
+
 [node name="tv_53" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="29"]
 transform = Transform3D(1, 0, 0, 0, 0.999973, -0.00728203, 0, 0.00728203, 0.999973, 0.473795, 1.38854, 8.19102)
 
