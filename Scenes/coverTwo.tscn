@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnnvcobamfi2d"]
+
+[ext_resource type="Texture2D" uid="uid://cg3y2vnc0wwuh" path="res://Models/Nova pasta/second cover.png" id="1_fjw3l"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.49723, 1.49223)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 361)
+scale = Vector2(1.00352, 1.00418)
+texture = ExtResource("1_fjw3l")
