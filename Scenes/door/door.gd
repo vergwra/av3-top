@@ -11,6 +11,7 @@ func _process(delta):
 	rotation_degrees.y = lerp(rotation_degrees.y, target_rotation, 10 * delta);
 	
 func interact(sender: Node3D):
+	super.interact(self);
 	var z_vector = global_transform.basis.z
 	var relative_pos = sender.global_transform.origin - global_transform.origin
 

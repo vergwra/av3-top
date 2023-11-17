@@ -28,7 +28,7 @@ func _ready():
 func _process(delta):
 	_check_interacting();
 
-func _unhandled_input(event):
+func _input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)

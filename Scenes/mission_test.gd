@@ -6,8 +6,9 @@ func _ready():
 	pass
 
 func start_mission():
+	super.start_mission();
 	var doors = get_tree().get_nodes_in_group("doors")
-	
+	openned_doors = [];
 	for i in doors:
 		if i is door:
 			i.on_open = handle_open_door;
