@@ -10,6 +10,7 @@ var current_time = 0.0;
 var on_start_mission: Callable;
 var on_complete_mission: Callable;
 var on_complete_all_missions: Callable;
+var on_failed: Callable;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +20,9 @@ func _ready():
 func _process(delta):
 	if current_time > 0:
 		current_time -= delta;
+	elif current_mission != null:
+		if (on_failed.is_valid()):
+			on_failed.call();
 	
 func start_mission_by_index():
 	current_mission = missions[current_mission_index];
