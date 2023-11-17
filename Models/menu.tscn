@@ -182,14 +182,14 @@ modulate = Color(1, 1, 1, 0.286275)
 position = Vector2(964.5, 543)
 scale = Vector2(1.50855, 1.50512)
 sprite_frames = SubResource("SpriteFrames_ga23t")
-frame_progress = 0.689998
+frame_progress = 0.907586
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(964.5, 542.75)
 scale = Vector2(1.50922, 1.51689)
 sprite_frames = SubResource("SpriteFrames_dblo5")
-frame_progress = 0.198889
+frame_progress = 0.328076
 
 [node name="start2" type="Button" parent="."]
 layout_mode = 0
